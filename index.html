@@ -1,45 +1,279 @@
-<!DOCTYPE html>
-<html>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>My Resume | Profile</title>
-</head>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
 
-<body>
-    <header>
-        <a href="a" class="logo">Personal Portfolio</a>
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
 
-        <nav>
-            <a href="index.html" class="active">Profile</a>
-            <a href="Summary.html">Summary</a>
-            <a href="Skills.html">Skills</a>
-            <a href="Education.html">Education</a>
-            <a href="Contact.html">Contact</a>
-        </nav>
-    </header>
-    <section class="home">
-        <div class="home-img">
-            <img src="main.jpg" alt="">
-        </div>
-        <div class="home-content">
-            <h1>Hi, I am <span>Renz</span></h1>
-            <h3 class="typing-text">A <span></span></h3>
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: beige;
+    color: rgb( 22, 22, 22);
+}
 
-            <br>
-            <br>
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 5%;
+    background-color: rgb(104, 83, 59);
+    display: block;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
 
-            
-            <div class="social-icons">
-                <a href="https://www.facebook.com/darelleee.24"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://x.com/darelleee_24"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.instagram.com/rnxz.sh1n/"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-        </div>
-    </section>
-</body>
+.logo {
+    font-size: 3rem;
+    color: rgb(175, 148, 118);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
 
-</html>
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: rgb( 22, 22, 22);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nava.active {
+    color: rgb(175, 148, 118);
+    border-bottom: 3px solid rgb(175, 148, 118);
+}
+
+@media(max-width:999px) {
+    nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid rgb(175, 148, 118);
+        border-bottom: 3px solid rgb(175, 148, 118);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: beige;
+        border-top: 0.1rem solid beige;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid rgb(175, 148, 118);
+    }
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.skills-list, .contact-list {
+    list-style: none;
+    padding: 0;
+}
+.skills-list li, .contact-list li {
+    margin: 10px 0;
+}
+.education-item {
+    margin-bottom: 20px;
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: beige;
+}
+
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: rgb(175, 148, 118);
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-img img {
+    position: relative;
+    width: 28vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid rgb(175, 148, 118);
+    cursor: pointer;
+    transition: 0.2s linear;
+
+}
+
+.home-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid rgb(175, 148, 118);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: rgb(175, 148, 118);
+}
+
+.social-icons a:hover {
+    color: beige;
+    transform: scale(1.3) translateY(-5px);
+    background-color: rgb(175, 148, 118);
+    box-shadow: 0 0 25px rgb(175, 148, 118);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: beige;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: rgb(175, 148, 118);
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid rgb(175, 148, 118);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale3d(1.03);
+    background-color: rgb(175, 148, 118);
+    color: beige;
+    box-shadow: 0 0 25px rgb(175, 148, 118);
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "BSIT Student";
+    color: rgb(175, 148, 118);
+    animation: words 20s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: beige;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid beige;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid rgb(175, 148, 118);
+    }
+}
+
+@keyframes words {
+
+    0%,
+    20% {
+        content: "BSIT Student";
+    }
+}
+
+@media (max-width: 1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
