@@ -137,6 +137,7 @@ section {
 }
 
 .section {
+    scroll-margin-top: 80px;
     padding: 50px 20px;
     text-align: center;
 }
