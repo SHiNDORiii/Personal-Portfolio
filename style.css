@@ -37,6 +37,24 @@ header {
     z-index: 100;
 }
 
+input[type="text2"] {
+    box-sizing: border-box;
+    width: 500px;
+    padding: 50px;
+    border: 1px solid #4b3b26;
+    text-align: left;
+    background-color: white;
+}
+
+input[type="text"], select, country {
+    box-sizing: border-box;
+    width: 400px;
+    padding: 3px;
+    border: 1px solid #4b3b26;
+    text-align: center;
+    background-color: white;
+}
+
 .logo {
     font-size: 3rem;
     color: rgb(175, 148, 118);
